@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ackee
+    env: docker
+    plan: starter
+    autoDeploy: true
+    private: false # 👈 METTRE false pour avoir une URL publique
+    envVars:
+      - key: MONGODB_HOSTPORT
+        value: mongodb://ac-v6kxwof-shard-00-01.66vkrts.mongodb.net:27017
+      - key: MONGODB_DATABASE
+        value: spreadsheet-app
+      - key: ACKEE_USERNAME
+        value: admin
+      - key: ACKEE_PASSWORD
+        value: yourStrongPassword
+      - key: ACKEE_PORT
+        value: 80
+      - key: ACKEE_ALLOW_ORIGIN
+        value: "*"
