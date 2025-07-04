@@ -4,7 +4,6 @@ services:
     env: docker
     plan: starter
     autoDeploy: true
-    private: false # 👈 METTRE false pour avoir une URL publique
     envVars:
       - key: MONGODB_HOSTPORT
         value: mongodb://ac-v6kxwof-shard-00-01.66vkrts.mongodb.net:27017
